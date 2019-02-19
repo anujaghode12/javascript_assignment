@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript">
+	    function result() {
+	    	var size= document.forms["myForm"]["num"].value;
+	      var num = new Array(4);
+	      var i;
+	      for(i = 0; i<size; i++) {
+	        num[i] = eval(prompt("Enter a number"));  
+	      }
+	      for(i = 0; i<size; i++) {
+	       	document.write(num[i]);
+	      }
+	      var largest =0;
+	      for(i = 0; i<size; i++) {
+	        if (num[i]>largest) {
+	        largest=num[i];
+	        }
+	      }
+	      alert("The largest number is:" +largest);
+	    }
+    </script>
+  </head>
+  <body>
+    <form name="myForm"  onsubmit="return result()" method="post">
+      Enter the size of array: <input type="text" name="num"><br><br>
+      <input type="submit" value="Submit">
+   </form>
+  </body>
+  </html>
