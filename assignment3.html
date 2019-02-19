@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Multiplication Table
+	</title>
+	<script type="text/javascript">
+	function multtable() {
+	  var num = document.forms["myForm"]["num"].value;
+	  var i;
+	  for(i=1;i<num;i++) {
+	  	var result= i * num;
+	  	document.write(result);
+	  	document.write("<br>");
+
+	  }
+
+	}
+</script>
+</head>
+<body>
+   <form name="myForm"  onsubmit="return multtable()" method="post">
+      Enter the first value: <input type="text" name="num"><br><br>
+      <input type="submit" value="Submit">
+   </form>
+</body>
+</html>

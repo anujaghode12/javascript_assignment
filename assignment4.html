@@ -1,0 +1,26 @@
+<html>
+  <title>
+  </title>
+  <head>
+  	<script type="text/javascript">
+  		function result() {
+  			var num= document.forms["myForm"]["value"].value;
+        var i,count;
+        n=parseInt(num);
+        while(n!=0) {
+          
+          n=n/10;
+          count	++;
+        }
+        alert(count);
+
+  		}
+  	</script>
+  </head>
+  <body>
+    <form name="myForm"  onsubmit="return result()" method="post">
+      Enter the value: <input type="text" name="value"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
