@@ -1,0 +1,31 @@
+<html>
+  <title>
+  </title>
+  <head>
+  	<script type="text/javascript">
+  	  function result() {
+        var size = document.forms["myForm"]["num"].value;
+	      var num1 = new Array(size);
+	      var num2 = new Array(size);
+	      var num3 = new Array(size);
+		    var i;
+		    for(i = 0; i < size; i ++) {
+		        num1[i] = eval(prompt("Enter array1 values"));  
+		    }
+		    for(i = 0; i < size; i ++) {
+		        num2[i] = eval(prompt("Enter aarray2 values"));  
+		    }
+		    for(i = 0; i < size; i ++) {
+          num3[i]= +num1[i]+ + +num2[i];
+		    }
+		    alert("Addition = " +num3);
+		  }
+  	</script>
+  </head>
+  <body>
+    <form name="myForm"  onsubmit="return result()" method="post">
+      Enter the size of array: <input type="text" name="num"><br><br>
+      <input type="submit" value="Submit">
+   </form>
+  </body>
+</html>
